@@ -1,0 +1,38 @@
+---- Minecraft Crash Report ----
+// On the bright side, I bought you a teddy bear!
+
+Time: 6/7/16 7:39 PM
+Description: Exception in server tick loop
+
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.HashMap.newNode(HashMap.java:1734)
+	at java.util.HashMap.putVal(HashMap.java:641)
+	at java.util.HashMap.put(HashMap.java:611)
+	at dr.a(SourceFile:138)
+	at atk.a(SourceFile:227)
+	at atk.a(SourceFile:104)
+	at lr.c(SourceFile:147)
+	at lr.a(SourceFile:166)
+	at ls.a(SourceFile:884)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:372)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:572)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:458)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10-pre1
+	Operating System: Linux (amd64) version 4.4.0-22-generic
+	Java Version: 1.8.0_91, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 10570520 bytes (10 MB) / 112197632 bytes (107 MB) up to 112197632 bytes (107 MB)
+	JVM Flags: 2 total; -Xmx5G -Xmx120M
+	IntCache: cache: 1, tcache: 1, allocated: 12, tallocated: 94
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 30; [lu['GlitchedPixels'/517, l='world', x=18.52, y=49.00, z=44.70]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

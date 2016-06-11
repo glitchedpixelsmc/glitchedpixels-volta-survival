@@ -1,0 +1,201 @@
+---- Minecraft Crash Report ----
+// Everything's going to plan. No, really, that was supposed to happen.
+
+Time: 5/24/16 7:21 AM
+Description: Watching Server
+
+java.lang.Error
+	at it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap.get(Long2ObjectOpenHashMap.java:379)
+	at lq.a(SourceFile:68)
+	at lq.b(SourceFile:78)
+	at lq.c(SourceFile:95)
+	at aia.a(SourceFile:299)
+	at aia.f(SourceFile:295)
+	at aia.o(SourceFile:679)
+	at avh.b(SourceFile:69)
+	at aiq.a(SourceFile:330)
+	at aiq.a(SourceFile:306)
+	at aiq.a(SourceFile:94)
+	at aiq.a(SourceFile:88)
+	at ain.a(SourceFile:245)
+	at aiv.a(SourceFile:46)
+	at atz.b(SourceFile:472)
+	at asr.a(SourceFile:803)
+	at asr.a(SourceFile:777)
+	at lq.c(SourceFile:115)
+	at lw.a(SourceFile:85)
+	at lx.c(SourceFile:147)
+	at lr.d(SourceFile:222)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:618)
+	at lc.D(SourceFile:340)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:554)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:458)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap.get(Long2ObjectOpenHashMap.java:379)
+	at lq.a(SourceFile:68)
+	at lq.b(SourceFile:78)
+	at lq.c(SourceFile:95)
+	at aia.a(SourceFile:299)
+	at aia.f(SourceFile:295)
+	at aia.o(SourceFile:679)
+	at avh.b(SourceFile:69)
+	at aiq.a(SourceFile:330)
+	at aiq.a(SourceFile:306)
+	at aiq.a(SourceFile:94)
+	at aiq.a(SourceFile:88)
+	at ain.a(SourceFile:245)
+	at aiv.a(SourceFile:46)
+	at atz.b(SourceFile:472)
+	at asr.a(SourceFile:803)
+	at asr.a(SourceFile:777)
+	at lq.c(SourceFile:115)
+	at lw.a(SourceFile:85)
+	at lx.c(SourceFile:147)
+	at lr.d(SourceFile:222)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:618)
+	at lc.D(SourceFile:340)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:554)
+
+-- Thread Dump --
+Details:
+	Threads: "Netty Epoll Server IO #3" Id=22 RUNNABLE (in native)
+	at io.netty.channel.epoll.Native.epollWait(Native Method)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:194)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:219)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Epoll Server IO #2" Id=21 RUNNABLE (in native)
+	at io.netty.channel.epoll.Native.epollWait(Native Method)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:194)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:219)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Epoll Server IO #1" Id=20 RUNNABLE (in native)
+	at io.netty.channel.epoll.Native.epollWait(Native Method)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:194)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:219)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"File IO Thread" Id=32 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at bbq.c(SourceFile:51)
+	at bbq.run(SourceFile:30)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Java2D Disposer" Id=29 WAITING on java.lang.ref.ReferenceQueue$Lock@20b401dc
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@20b401dc
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at sun.java2d.Disposer.run(Disposer.java:148)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Server Watchdog" Id=28 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:454)
+	at ld.run(SourceFile:43)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Epoll Server IO #0" Id=19 RUNNABLE (in native)
+	at io.netty.channel.epoll.Native.epollWait(Native Method)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:194)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:219)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Server console handler" Id=16 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	-  locked java.io.BufferedInputStream@2e73fbba
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	-  locked java.io.InputStreamReader@2a4c6aac
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	...
+
+
+"DestroyJavaVM" Id=15 RUNNABLE
+
+
+"Server thread" Id=13 RUNNABLE
+	at it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap.get(Long2ObjectOpenHashMap.java:379)
+	at lq.a(SourceFile:68)
+	at lq.b(SourceFile:78)
+	at lq.c(SourceFile:95)
+	at aia.a(SourceFile:299)
+	at aia.f(SourceFile:295)
+	at aia.o(SourceFile:679)
+	at avh.b(SourceFile:69)
+	...
+
+
+"Server Infinisleeper" Id=12 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at lc$1.run(SourceFile:78)
+
+
+"Snooper Timer" Id=11 TIMED_WAITING on java.util.TaskQueue@6f4ef181
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@6f4ef181
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@6f74b755
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@6f74b755
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@5eeb3f2a
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@5eeb3f2a
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+
+
+Stacktrace:
+	at ld.run(SourceFile:59)
+	at java.lang.Thread.run(Thread.java:745)
+
+-- System Details --
+Details:
+	Minecraft Version: 16w20a
+	Operating System: Linux (amd64) version 4.4.0-22-generic
+	Java Version: 1.8.0_91, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 91567696 bytes (87 MB) / 252706816 bytes (241 MB) up to 5326766080 bytes (5080 MB)
+	JVM Flags: 2 total; -Xmx5G -Xmn120M
+	IntCache: cache: 1, tcache: 1, allocated: 12, tallocated: 94
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 30; [lt['GlitchedPixels'/636, l='world', x=-413.98, y=170.00, z=953.82]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

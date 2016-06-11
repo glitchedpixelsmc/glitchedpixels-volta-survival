@@ -1,0 +1,63 @@
+---- Minecraft Crash Report ----
+// I'm sorry, Dave.
+
+Time: 6/7/16 6:57 PM
+Description: Exception ticking world
+
+java.lang.OutOfMemoryError: Java heap space
+	at gt.<init>(SourceFile:39)
+	at lx.b(SourceFile:106)
+	at ly.c(SourceFile:165)
+	at ls.d(SourceFile:222)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:618)
+	at ld.D(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:554)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:458)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at gt.<init>(SourceFile:39)
+	at lx.b(SourceFile:106)
+	at ly.c(SourceFile:165)
+	at ls.d(SourceFile:222)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 1 total; [lu['GlitchedPixels'/535, l='world', x=18.96, y=49.00, z=43.97]]
+	Chunk stats: ServerChunkCache: 490 Drop: 0
+	Level seed: -1645629419
+	Level generator: ID 03 - amplified, ver 0. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (91,63,282), Chunk: (at 11,3,10 in 5,17; contains blocks 80,0,272 to 95,255,287), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 35358169 game time, 4627372 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 35805 (now: false), thunder time: 55627 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.D(SourceFile:618)
+	at ld.D(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:554)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:458)
+	at java.lang.Thread.run(Thread.java:745)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10-pre1
+	Operating System: Linux (amd64) version 4.4.0-22-generic
+	Java Version: 1.8.0_91, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 12079552 bytes (11 MB) / 110624768 bytes (105 MB) up to 112197632 bytes (107 MB)
+	JVM Flags: 2 total; -Xmx5G -Xmx120M
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 30; [lu['GlitchedPixels'/535, l='world', x=18.96, y=49.00, z=43.97]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
